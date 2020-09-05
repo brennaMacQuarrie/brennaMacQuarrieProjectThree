@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prickly Peach Quiz!</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,700;1,100&display=swap" rel=“stylesheet">
+    <link type="image/ico" href="./favicon_io/favicon.ico" rel="icon">
+</head>
+<body>
+    <header id="home">
+        <div class="top wrapper">
+            <!-- <img src="./assets/TEXTLOGO.jpg" alt="welcome to prickly peach hedgehogs!" class="logo"> -->
+            <h1><em>which hog should you hog?</em></h1>
+            <nav>
+                <div class="hamburg">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Restart</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="https://www.pricklypeachhedgehogs.com/available-hoglets">View Hogs</a></li>
+                        <li><a href="https://www.pricklypeachhedgehogs.com/form">Order Form</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <a class="button" href="#questionOne">Start!</a>
+    </header>
+
+    <section class="pageOne" id="questionOne">
+        <h2>Pick a Color!</h2>
+            <ol>
+                <li class="option peach">Blush</li>
+                <li class="option parsley">Cinnamon</li>
+                <li class="option bun">Charcoal</li>
+            </ol>
+            <a href="#questionTwo" class="button">Next!</a>
+    </section>
+
+    <section class="pageTwo" id="questionTwo">
+        <h2>Ur Fave Food?</h2>
+        <ol>
+            <li class="option parsley">Nuts</li>
+            <li class="option peach">Fruits</li>
+            <li class="option bun">Ice Creams</li>
+        </ol>
+        <a href="#questionThree" class="button">Next!</a>
+    </section>
+
+    <section class="pageThree" id="questionThree">
+        <h2>Congrats! You Got</h2>
+        <ol>
+            <li class="option bun">Read</li>
+            <li class="option parsley">Adventure!</li>
+            <li class="option peach">Cuddle</li>
+        </ol>
+        <a href="#result" class="finishButton">See Ur Hog!</a>
+    </section>
+
+    <section class="final" id="result">
+        <h2>Congrats! You Got:</h2>
+        <img src="https://placebear.com/g/200/300" alt="your hedgehog!">
+        <h3 class="resultHog"></h3>
+        <a href="https://www.pricklypeachhedgehogs.com/form" class="orderButton">Order Me!</a>
+        <a href="#home">Again! Again!</a>
+    </section>
+
+    
+
+
+
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="peachScript.js"></script>
+</body>
+</html>
