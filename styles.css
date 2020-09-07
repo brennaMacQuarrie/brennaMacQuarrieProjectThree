@@ -146,7 +146,8 @@ div.three {
     background: #aadacf;
 }
 .menu ul li:hover a {
-    color: white;
+    color: rgb(128, 128, 128);
+    font-weight: 300;
 }
 
 .hamburg.active .one {
