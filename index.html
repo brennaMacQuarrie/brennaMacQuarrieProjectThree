@@ -6,16 +6,18 @@
     <title>Prickly Peach Quiz!</title>
     <link rel="stylesheet" href="styles.css">
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,700;1,100&display=swap" rel=“stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Montserrat:ital,wght@0,100;0,300;0,600;0,900;1,100;1,900&display=swap"
+        rel="stylesheet">
     <link type="image/ico" href="./favicon_io/favicon.ico" rel="icon">
 </head>
 <body>
     <header id="home">
         <div class="top wrapper">
-            <!-- <img src="./assets/TEXTLOGO.jpg" alt="welcome to prickly peach hedgehogs!" class="logo"> -->
-            <h1><em>which hog should you hog?</em></h1>
+            <img src="./assets/textonly.png" alt="welcome to prickly peach hedgehogs!" class="logo">
+            <h1>which hog should you hog?</h1>
             <nav>
-                <div class="hamburg">
+                <div aria-label="click here for the menu." class="hamburg">
                     <div class="one"></div>
                     <div class="two"></div>
                     <div class="three"></div>
@@ -31,7 +33,7 @@
                 </div>
             </nav>
         </div>
-        <a class="button" href="#questionOne">Start!</a>
+        <a class="startButton button" href="#questionOne">Start!</a>
     </header>
 
     <section class="pageOne" id="questionOne">
@@ -55,25 +57,22 @@
     </section>
 
     <section class="pageThree" id="questionThree">
-        <h2>Congrats! You Got</h2>
+        <h2>Whatcha Wanna Do?</h2>
         <ol>
             <li class="option bun">Read</li>
             <li class="option parsley">Adventure!</li>
             <li class="option peach">Cuddle</li>
         </ol>
-        <a href="#result" class="finishButton">See Ur Hog!</a>
+        <a href="#result" class="finishButton button">See Ur Hog!</a>
     </section>
 
     <section class="final" id="result">
         <h2>Congrats! You Got:</h2>
         <img src="https://placebear.com/g/200/300" alt="your hedgehog!">
-        <h3 class="resultHog"></h3>
-        <a href="https://www.pricklypeachhedgehogs.com/form" class="orderButton">Order Me!</a>
-        <a href="#home">Again! Again!</a>
+        <h3 class="resultHog">placeholder</h3>
+        <a href="https://www.pricklypeachhedgehogs.com/form" class="orderButton button">Order Me!</a>
+        <a class="retake" href="#home">Click Here to Take the Quiz Again</a>
     </section>
-
-    
-
 
 
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>

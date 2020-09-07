@@ -21,6 +21,7 @@ $(document).ready(function() {
         $(this).toggleClass('active');
         $('.menu').toggleClass('active');
     });
+
     //create a userPoints variable
     //when user clicks an a tag, add a certain number of 
     let userPoints = 0;
@@ -28,15 +29,15 @@ $(document).ready(function() {
         
         if ($('this').hasClass("peach")) {
             userPoints += 1;
-            console.log(userPoints);
+            console.log(userPoints)
 
         } else if ($(this).hasClass("parsley")) {
             userPoints += 2;
-            console.log(userPoints);
+            console.log(userPoints)
 
         } else if ($(this).hasClass("bun")) {
             userPoints += 3;
-            console.log(userPoints);
+            console.log(userPoints)
 
         }
         console.log('tell me u submit');

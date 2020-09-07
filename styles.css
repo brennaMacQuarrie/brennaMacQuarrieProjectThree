@@ -32,55 +32,75 @@ ol,
 ul {
     list-style-type: none;
 }
-h1 {
-    margin: 0;
-    font-weight: 100;
-    color: #F8BCB3;
-    text-shadow: rgb(61, 61, 61) 1px 1px 1px;
-}
 a {
     text-decoration: none;
 }
 
 header {
     background-image: url(./assets/hog\ only.jpg);
-    background-size: cover;
+    background-size: 1300px;
     background-repeat: no-repeat;
     background-position: center;
+    
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
     justify-content: space-between;
     border: 8px double #1e4e22;
     border-radius: 5px;
-}
-/* header img {
+
     position: relative;
-    left: -150px;
-} */
+}
+
+h1 {
+    font-size: calc(4rem + 2vw);
+    font-weight: 300;
+    color: rgb(124, 124, 124);
+    text-shadow: 2px 2px 4px #000000;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+h1::after {
+    content: '';
+    display: inline-block;
+    width: 70%;
+    height: 40%;
+    background-color: rgba(148, 248, 228, 0.4);
+    position: absolute;
+    bottom: 0;
+    left: calc((100% - 70%) / 2);
+    z-index: -1;
+}
 nav {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    
 }
+
 .top {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
-
+}
+.top img {
+    min-width: 300px;
 }
 .hamburg {
-    width: 50px;
-    height: 50px;
-    color: #84dccb;
+    width: 60px;
+    height: 60px;
+    color: #a8daca;
     border: 3px solid;
     border-radius: 50%;
     align-self: flex-end;
     cursor: pointer;
     position: relative;
-    /* margin-top: 30px; */
 }
 .hamburg > div {
     position: absolute;
@@ -88,7 +108,7 @@ nav {
     left: 25%;
     width: 50%;
     height: 3px;
-    background: #84dccb;
+    background: #a8daca;
     border-radius: 50px;
     transition: all 0.4s;
 }
@@ -100,8 +120,6 @@ div.three {
 }
 
 .menu {
-    /* width: 150px; */
-    background: rgba(255, 255, 255, 0.5);
     height: auto;
     text-align: right;
     position: relative;
@@ -120,15 +138,16 @@ div.three {
 .menu a {
     padding: 10px;
     display: block;
-    color: #84dccb;
+    color: #95cab9;
     transition: all 0.2s;
 }
 .menu ul li:hover {
-    background: #84dccb;
+    background: #aadacf;
 }
 .menu ul li:hover a {
     color: white;
 }
+
 .hamburg.active .one {
     transform: rotate(45deg);
     top: 45%;
@@ -145,29 +164,36 @@ div.three {
 .menu.active {
     right: 0;
 }
+.hamburg:hover,
+.hamburg:focus  {
+    background: #aadacf;
+}
+.hamburg:hover > div,
+.hamburg:focus > div {
+    background-color: white;
+}
 
-.button,
-.finishButton,
-.orderButton {
+.button {
     padding: 10px 50px;
     border: double transparent 3px;
     border-radius: 5px;
+    box-shadow: 5px 5px rgba(128, 128, 128, 0.5);
     margin-bottom: 60px;
-    background: #84dccb;
+    background: #a7d9cc;
+    font-weight: 900;
     color: white;
     transition: all 0.3s;
-    font-size: 2.5rem;
-    
+    font-size: 2.8rem;
 }
-
+.orderButton {
+    font-style: italic;
+}
 .button:hover,
-.button:focus,
-.finishButton:hover,
-.finishButton:focus,
-.orderButton:hover,
-.orderButton:focus {
+.button:focus {
     background-color: #F8BCB3;
     border: double white 3px;
+    box-shadow: 5px 5px rgba(207, 207, 207, 0.5);
+    color: white;
 }
 
 .pageOne,
@@ -186,10 +212,12 @@ div.three {
 
 h2 {
     font-size: 4rem;
-    color: #84dccb;
+    color: #aadacf;
     display: inline-block;
     position: relative;
     font-style: italic;
+    font-weight: 900;
+    z-index: 5;
 }
 h2::after,
 h3::after {
@@ -201,6 +229,7 @@ h3::after {
     position: absolute;
     bottom: 0;
     left: 5%;
+    z-index: -1;
 }
 
 ol {
@@ -210,45 +239,52 @@ ol {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    /* align-items: center; */
-    /* margin: 0 auto; */
+    align-items: center;
 }
 ol li {
     margin: 20px;
     font-size: 2.5rem;
-    /* color: #9CE2D4; */
+    padding: 10px;
+    width: auto;
+    border: 2px double transparent;
+}
+ol li:hover,
+ol li:focus {
+    background: #f7c6c6;
+    color: white;
+    border: 2px double #c5a2a2; 
+    font-style: italic;
+    font-weight: 300;
 }
 
-.pageOne ol li::before {
+.pageOne ol li::before,
+.pageOne ol li::after {
     content: "🐽";
     padding: 8px;
     font-size: 2.5rem;
 }
-.pageTwo ol li::before {
+.pageTwo ol li::before,
+.pageTwo ol li::after {
     content: "🍨";
     padding: 8px;
     font-size: 2.5rem;
 }
-.pageThree ol li::before {
+.pageThree ol li::before,
+.pageThree ol li::after {
     content: "🐾";
     padding: 8px;
     font-size: 2.5rem;
 }
 
-/* h3 {
-
-} */
 h3 {
     color: #dfa79f;
-    font-size: 3.4rem;
+    font-size: 4rem;
     padding: 0;
     margin: 40px auto;
     text-transform: uppercase;
     font-style: italic;
     position: relative;
 }
-
 
 h3::before {
     content: "";
@@ -260,16 +296,16 @@ h3::before {
     bottom: 0;
     left: 5%;
     transition: all 0.4s;
-    /* z-index: -1; */
+    z-index: -1;
 }
 
 img {
     height: 50%;
     width: auto;
 }
-.final a {
+.retake {
     font-size: 15px;
     font-weight: 100px;
     color: #308137;
-    margin-bottom: 50px;
+    text-decoration: underline;
 }
