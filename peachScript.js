@@ -1,20 +1,20 @@
-const hogs = [
-    {
-        name: "peach",
-        points: [3, 4],
-        // picture: 
-    },
-    {
-        name: "parsley",
-        points: [5, 6, 7],
-        // picture:
-    },
-    {
-        name: "bun",
-        points: [8, 9],
-        // picture:
-    },
-];
+// const hogs = [
+//     {
+//         name: "peach",
+//         totalPoints: [3, 4],
+//         // picture: 
+//     },
+//     {
+//         name: "parsley",
+//         totalPoints: [5, 6, 7],
+//         // picture:
+//     },
+//     {
+//         name: "bun",
+//         totalPoints: [8, 9],
+//         // picture:
+//     },
+// ];
 
 $(document).ready(function() {
     $('.hamburg').click(function () {
@@ -22,46 +22,54 @@ $(document).ready(function() {
         $('.menu').toggleClass('active');
     });
 
-    //create a userPoints variable
-    //when user clicks an a tag, add a certain number of 
-    let userPoints = 0;
-    $('.option').on('click', function() {
-        
-        if ($('this').hasClass("peach")) {
-            userPoints += 1;
-            console.log(userPoints)
+    let peachPoints = 0;
+    let parsleyPoints = 0;
+    let bunPoints = 0;
 
-        } else if ($(this).hasClass("parsley")) {
-            userPoints += 2;
-            console.log(userPoints)
+    // type:radio:checked . val = "parsley"
+    // parselyPoints++
+    $('label').on('click', function() {
+        $(this).toggleClass('selected');
+    });
 
-        } else if ($(this).hasClass("bun")) {
-            userPoints += 3;
-            console.log(userPoints)
+    $('form').on('submit', function(e) {
+        e.preventDefault();
 
+        if ($('form[name=peach]:checked')) {
+            peachPoints++;
+            console.log(peachPoints)
+        } else if ($('form[name=parsley]:checked')) {
+            parsleyPoints++;
+            console.log(parsleyPoints)
+        } else if ($('form[name=bun]:checked')) {
+            bunPoints++;
+            console.log(bunPoints)
         }
         console.log('tell me u submit');
     });
-    console.log(userPoints);
+    // console.log(userPoints);
 
-    let chosenHog = "";
-    //when you click the submit button
-    $('.finishButton').on('submit', function(e) {
-        e.preventDefault();
+
+
+
+
+    //when you click the finalSubmit button
+    // $('.finishButton').on('submit', function(e) {
+    //     e.preventDefault();
         
-        for (let i = 0; i < hogs.length; i++) {
-            let currentHog = hogs[i];
-            let hogArray = currentHog.points;
-            for (let j = 0; j < hogArray.length; j++) {
-                if (userPoints === hogArray[j]) {
-                    chosenHog = currentHog.name;
-                }
-            }
-        }
+    //     for (let i = 0; i < hogs.length; i++) {
+    //         let currentHog = hogs[i];
+    //         let hogArray = currentHog.points;
+    //         for (let j = 0; j < hogArray.length; j++) {
+    //             if (userPoints === hogArray[j]) {
+    //                 chosenHog = currentHog.name;
+    //             }
+    //         }
+    //     }
 
-    });
+    // });
     
-    $('.resultHog').replaceWith(`<h3>${chosenHog}</h3>`)
+    // $('.resultHog').text(`${chosenHog}`)
 
     //change the img tag in .final to be that hog's image
 

@@ -39,39 +39,70 @@
     </header>
 
     <section class="pageOne" id="questionOne">
-        <h2>Pick a Color!</h2>
-            <ol>
-                <li class="option peach">Blush</li>
-                <li class="option parsley">Cinnamon</li>
-                <li class="option bun">Charcoal</li>
-            </ol>
-            <a href="#questionTwo" class="button">Next!</a>
+        <form action="">
+            <fieldset class="questionOne">
+                <h2>Pick a Color!</h2>
+                <div class="options">
+                    <label for="peach">Blush</label>
+                    <input type="radio" name="color" id="peach" value="peach">
+                    <label for="parsley">Cinnamon</label>
+                    <input type="radio" name="color" id="parsley" value="parsley">
+                    <label for="bun">Charcoal</label>
+                    <input type="radio" name="color" id="bun" value="bun">
+                </div>
+                <div>
+                    <input type="submit" value="Next!">
+                </div>
+            </fieldset>
+        </form>
     </section>
 
     <section class="pageTwo" id="questionTwo">
-        <h2>Ur Fave Food?</h2>
-        <ol>
-            <li class="option parsley">Nuts</li>
-            <li class="option peach">Fruits</li>
-            <li class="option bun">Ice Cream</li>
-        </ol>
-        <a href="#questionThree" class="button">Next!</a>
+        <form action="">
+            <fieldset class="questionTwo">
+                <h2>Ur Fave Food?</h2>
+                <div class="options">
+                    <label for="parsley">Nuts</label>
+                    <input type="radio" name="food" id="parsley" value="parsley">
+                    <label for="peach">Fruits</label>
+                    <input type="radio" name="food" id="peach" value="peach">
+                    <label for="bun">Ice Cream</label>
+                    <input type="radio" name="food" id="bun" value="bun">
+                </div>
+                <div>
+                    <input type="submit" value="Next!">
+                </div>
+            </fieldset>
+        </form>
     </section>
 
     <section class="pageThree" id="questionThree">
-        <h2>Whatcha Wanna Do?</h2>
-        <ol>
-            <li class="option bun">Read</li>
-            <li class="option parsley">Adventure</li>
-            <li class="option peach">Cuddle</li>
-        </ol>
-        <a href="#result" class="finishButton button">See Ur Hog!</a>
+        <form action="">
+            <fieldset class="questionThree">
+                <h2>Whatcha Wanna Do?</h2>
+                <div class="options">
+                    <label for="bun">Read</label>
+                    <input type="radio" name="activity" id="bun" value="bun">
+                    <label for="parsley">Adventure</label>
+                    <input type="radio" name="activity" id="parsley" value="parsley">
+                    <label for="peach">Cuddle</label>
+                    <input type="radio" name="activity" id="peach" value="bun">
+                </div>
+                <div>
+                    <input type="submit" value="See Ur Hog!">
+                </div>
+            </fieldset>
+        </form>
     </section>
 
     <section class="final" id="result">
         <h2>Congrats! You Got:</h2>
         <img src="https://placebear.com/g/200/300" alt="your hedgehog!">
-        <h3 class="resultHog">placeholder</h3>
+
+
+        <h3 class="resultHog"></h3>
+
+
         <a href="https://www.pricklypeachhedgehogs.com/form" class="orderButton button">Order Me!</a>
         <a class="retake" href="#home">Click Here to Take the Quiz Again</a>
     </section>

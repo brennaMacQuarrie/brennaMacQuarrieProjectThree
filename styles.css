@@ -127,9 +127,8 @@ div.three {
     right: -400px;
     transition: all 0.5s;
     text-transform: uppercase;
-    transition: all 0.4s;
     padding: 0;
-    bottom: -14px;
+    bottom: -15px;
 }
 .menu ul {
     margin-top: 10px;
@@ -140,7 +139,7 @@ div.three {
     display: block;
     color: #95cab9;
     background: rgba(255, 255, 255, 0.6);
-    transition: all 0.2s;
+    transition: all 0.3s;
 }
 .menu ul li:hover {
     background: #aadacf;
@@ -174,8 +173,9 @@ div.three {
 .hamburg:focus > div {
     background-color: white;
 }
-
+input[type=submit],
 .button {
+    background: #a8daca;
     padding: 10px 50px;
     border: double transparent 3px;
     border-radius: 5px;
@@ -187,9 +187,8 @@ div.three {
     transition: all 0.3s;
     font-size: calc(2rem + 1.3vw);
 }
-.orderButton {
-    font-style: italic;
-}
+input[type=submit]:hover,
+input[type=submit]:focus,
 .button:hover,
 .button:focus {
     background-color: #F8BCB3;
@@ -197,18 +196,27 @@ div.three {
     box-shadow: 5px 5px rgba(207, 207, 207, 0.5);
     color: white;
 }
+.orderButton {
+    font-style: italic;
+}
 
 .pageOne,
 .pageTwo,
 .pageThree,
 .final {
     height: 100vh;
+    border: 8px double #1e4e22;
+    border-radius: 5px;
+}
+.questionOne,
+.questionTwo,
+.questionThree,
+.final {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: 8px double #1e4e22;
-    border-radius: 5px;
+    height: 100vh;
     padding: 30px 0;
 }
 
@@ -234,8 +242,7 @@ h3::after {
     left: 5%;
     z-index: -1;
 }
-
-ol {
+.options {
     border: 4px double #F8BCB3;
     width: 50%;
     height: 40%;
@@ -245,45 +252,42 @@ ol {
     justify-content: center;
     align-items: center;
 }
-ol li {
-    /* margin: 20px; */
+label {
     font-size: calc(1.8rem + 0.8vw);
     padding: 10px;
     width: auto;
     border: 2px double transparent;
 }
-ol li:hover,
-ol li:focus {
+label:hover,
+label:focus,
+.selected {
     background: #f7c6c6;
     color: white;
     border: 2px double #c5a2a2; 
     font-style: italic;
     font-weight: 300;
 }
+.options input {
+    opacity: 0;
+}
 
-* ol li::before,
-* ol li::after {
+* label::before,
+* label::after {
     padding: 8px;
     font-size: calc(1.8rem + 0.8vw);
 }
 
-.pageOne ol li::before,
-.pageOne ol li::after {
+.questionOne label::before,
+.questionOne label::after {
     content: "🐽";
-    /* padding: 8px;
-    font-size: calc(1.8rem + 0.8vw); */
 }
-.pageTwo ol li::before,
-.pageTwo ol li::after {
+.questionTwo label::before,
+.questionTwo label::after {
     content: "🍨";
-    /* padding: 8px;
-    font-size: calc(1.8rem + 0.8vw); */
 }
-.pageThree ol li::before,
-.pageThree ol li::after {
+.questionThree label::before,
+.questionThree label::after {
     content: "🐾";
-    /* padding: 8px;
-    font-size: calc(1.8rem + 0.8vw); */
 }
 
 h3 {
