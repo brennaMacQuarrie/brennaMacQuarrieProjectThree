@@ -117,7 +117,7 @@
                     <input aria-label="hidden" type="radio" name="activity" id="peach" value="bun">
                 </div>
                 <div>
-                    <input onclick="window.location='#result'" type="submit" value="See Ur Hog!">
+                    <input onclick="window.location='#result'" type="submit" value="See Ur Hog!" id="done">
                 </div>
             </fieldset>
         </form>
@@ -125,9 +125,9 @@
 
     <section class="final" id="result">
         <h2>Congrats! You Got:</h2>
-        <img src="./assets/peach.png" alt="Peach!">
-        <img src="./assets/parsley.png" alt="Parsley!">
-        <img src="./assets/bun.png" alt="Bun!">
+        <img   id="peach" src="./assets/peach.png" alt="Peach!">
+        <img  id="parsley" src="./assets/parsley.png" alt="Parsley!">
+        <img  class="showMe" id="bun" src="./assets/bun.png" alt="Bun!">
 
 
         <h3 class="resultHog"></h3>
