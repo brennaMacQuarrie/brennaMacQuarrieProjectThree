@@ -38,15 +38,17 @@
         <a class="startButton button" href="#questionOne">Start!</a>
     </header>
 
-    <section class="pageOne" id="questionOne">
+    <section class="page" id="questionOne">
         <form action="">
             <fieldset class="questionOne">
                 <h2>Pick a Color!</h2>
                 <div class="options">
                     <label for="peach">Blush</label>
                     <input type="radio" name="color" id="peach" value="peach">
+
                     <label for="parsley">Cinnamon</label>
                     <input type="radio" name="color" id="parsley" value="parsley">
+
                     <label for="bun">Charcoal</label>
                     <input type="radio" name="color" id="bun" value="bun">
                 </div>
@@ -57,7 +59,7 @@
         </form>
     </section>
 
-    <section class="pageTwo" id="questionTwo">
+    <section class="page" id="questionTwo">
         <form action="">
             <fieldset class="questionTwo">
                 <h2>Ur Fave Food?</h2>
@@ -76,9 +78,28 @@
         </form>
     </section>
 
-    <section class="pageThree" id="questionThree">
+    <section class="page" id="questionThree">
         <form action="">
             <fieldset class="questionThree">
+                <h2>Your Alter Ego?</h2>
+                <div class="options">
+                    <label for="parsley">Aladdin</label>
+                    <input type="radio" name="alterEgo" id="parsley" value="parsley">
+                    <label for="peach">Elastigirl</label>
+                    <input type="radio" name="alterEgo" id="peach" value="peach">
+                    <label for="bun">Batman</label>
+                    <input type="radio" name="alterEgo" id="bun" value="bun">
+                </div>
+                <div>
+                    <input type="submit" value="Next!">
+                </div>
+            </fieldset>
+        </form>
+    </section>
+
+    <section class="page" id="questionFour">
+        <form action="">
+            <fieldset class="questionFour">
                 <h2>Whatcha Wanna Do?</h2>
                 <div class="options">
                     <label for="bun">Read</label>
@@ -97,7 +118,9 @@
 
     <section class="final" id="result">
         <h2>Congrats! You Got:</h2>
-        <img src="https://placebear.com/g/200/300" alt="your hedgehog!">
+        <img src="./assets/peach.png" alt="Peach!">
+        <img src="./assets/parsley.png" alt="Parsley!">
+        <img src="./assets/bun.png" alt="Bun!">
 
 
         <h3 class="resultHog"></h3>

@@ -200,9 +200,7 @@ input[type=submit]:focus,
     font-style: italic;
 }
 
-.pageOne,
-.pageTwo,
-.pageThree,
+.page,
 .final {
     height: 100vh;
     border: 8px double #1e4e22;
@@ -211,6 +209,7 @@ input[type=submit]:focus,
 .questionOne,
 .questionTwo,
 .questionThree,
+.questionFour,
 .final {
     display: flex;
     flex-direction: column;
@@ -287,6 +286,10 @@ label:focus,
 }
 .questionThree label::before,
 .questionThree label::after {
+    content: "⭐️";
+}
+.questionFour label::before,
+.questionFour label::after {
     content: "🐾";
 }
 

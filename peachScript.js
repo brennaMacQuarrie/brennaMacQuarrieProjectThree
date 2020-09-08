@@ -28,6 +28,10 @@ $(document).ready(function() {
 
     // type:radio:checked . val = "parsley"
     // parselyPoints++
+
+
+    // text <-- when u click <-- the specific label is given styling from .select... must UNCLICK to remove class, 
+    // i want it to remove class on clicking other option
     $('label').on('click', function() {
         $(this).toggleClass('selected');
     });
@@ -35,41 +39,27 @@ $(document).ready(function() {
     $('form').on('submit', function(e) {
         e.preventDefault();
 
-        if ($('form[name=peach]:checked')) {
+        if ($("input:radio[id=peach]").is(":checked")) {
             peachPoints++;
-            console.log(peachPoints)
-        } else if ($('form[name=parsley]:checked')) {
+        } else if ($("input:radio[id=parsley]").is(":checked")) {
             parsleyPoints++;
-            console.log(parsleyPoints)
-        } else if ($('form[name=bun]:checked')) {
+        } else if ($("input:radio[id=bun]").is(":checked")) {
             bunPoints++;
-            console.log(bunPoints)
         }
         console.log('tell me u submit');
+        console.log(peachPoints, parsleyPoints, bunPoints);
     });
-    // console.log(userPoints);
 
 
-
-
-
-    //when you click the finalSubmit button
-    // $('.finishButton').on('submit', function(e) {
-    //     e.preventDefault();
-        
-    //     for (let i = 0; i < hogs.length; i++) {
-    //         let currentHog = hogs[i];
-    //         let hogArray = currentHog.points;
-    //         for (let j = 0; j < hogArray.length; j++) {
-    //             if (userPoints === hogArray[j]) {
-    //                 chosenHog = currentHog.name;
-    //             }
-    //         }
-    //     }
-
-    // });
     
-    // $('.resultHog').text(`${chosenHog}`)
+    //when you click the finalSubmit button
+    $("input:submit[value=See Ur Hog!]".on('submit', function(e) {
+        e.preventDefault();
+        
+        $('.resultHog').text(`${chosenHog}`)
+
+    });
+    
 
     //change the img tag in .final to be that hog's image
 
