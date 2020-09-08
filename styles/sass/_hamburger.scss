@@ -1,0 +1,81 @@
+.hamburg {
+    width: 60px;
+    height: 60px;
+    color: #a8daca;
+    border: 3px solid;
+    border-radius: 50%;
+    align-self: flex-end;
+    cursor: pointer;
+    position: relative;
+}
+.hamburg > div {
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background: #a8daca;
+    border-radius: 50px;
+    transition: all 0.4s;
+}
+div.one {
+    top: 25%;
+}
+div.three {
+    top: 65%;
+}
+
+.menu {
+    height: auto;
+    text-align: right;
+    position: relative;
+    top: -20;
+    right: -400px;
+    transition: all 0.5s;
+    text-transform: uppercase;
+    padding: 0;
+    bottom: -15px;
+}
+.menu ul {
+    margin-top: 10px;
+    padding: 0;
+}
+.menu a {
+    padding: 10px;
+    display: block;
+    color: #95cab9;
+    background: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s;
+}
+.menu ul li:hover {
+    background: #aadacf;
+}
+.menu ul li:hover a {
+    color: rgb(128, 128, 128);
+    font-weight: 300;
+}
+
+.hamburg.active .one {
+    transform: rotate(45deg);
+    top: 45%;
+    left: 25%;
+}
+.hamburg.active .three {
+    transform: rotate(-45deg);
+    top: 45%;
+    left: 25%;
+}
+.hamburg.active .two {
+    opacity: 0;
+}
+.menu.active {
+    right: 0;
+}
+.hamburg:hover,
+.hamburg:focus  {
+    background: #aadacf;
+}
+.hamburg:hover > div,
+.hamburg:focus > div {
+    background-color: white;
+}

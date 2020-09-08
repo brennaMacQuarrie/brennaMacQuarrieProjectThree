@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prickly Peach Quiz!</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/style.css">
 
     <link type="image/ico" href="./favicon_io-3/favicon.ico" rel="icon">
     
@@ -44,16 +44,16 @@
                 <h2>Pick a Color!</h2>
                 <div class="options">
                     <label for="peach">Blush</label>
-                    <input type="radio" name="color" id="peach" value="peach">
+                    <input aria-label="hidden" type="radio" name="color" id="peach" value="peach">
 
                     <label for="parsley">Cinnamon</label>
-                    <input type="radio" name="color" id="parsley" value="parsley">
+                    <input aria-label="hidden" type="radio" name="color" id="parsley" value="parsley">
 
                     <label for="bun">Charcoal</label>
-                    <input type="radio" name="color" id="bun" value="bun">
+                    <input aria-label="hidden" type="radio" name="color" id="bun" value="bun">
                 </div>
                 <div>
-                    <input type="submit" value="Next!">
+                    <input onclick="window.location='#questionTwo'" type="submit" value="Next!">
                 </div>
             </fieldset>
         </form>
@@ -65,14 +65,16 @@
                 <h2>Ur Fave Food?</h2>
                 <div class="options">
                     <label for="parsley">Nuts</label>
-                    <input type="radio" name="food" id="parsley" value="parsley">
+                    <input aria-label="hidden" type="radio" name="food" id="parsley" value="parsley">
+
                     <label for="peach">Fruits</label>
-                    <input type="radio" name="food" id="peach" value="peach">
+                    <input aria-label="hidden" type="radio" name="food" id="peach" value="peach">
+                    
                     <label for="bun">Ice Cream</label>
-                    <input type="radio" name="food" id="bun" value="bun">
+                    <input aria-label="hidden" type="radio" name="food" id="bun" value="bun">
                 </div>
                 <div>
-                    <input type="submit" value="Next!">
+                    <input onclick="window.location='#questionThree'"type="submit" value="Next!">
                 </div>
             </fieldset>
         </form>
@@ -84,14 +86,16 @@
                 <h2>Your Alter Ego?</h2>
                 <div class="options">
                     <label for="parsley">Aladdin</label>
-                    <input type="radio" name="alterEgo" id="parsley" value="parsley">
+                    <input aria-label="hidden" type="radio" name="alterEgo" id="parsley" value="parsley">
+
                     <label for="peach">Elastigirl</label>
-                    <input type="radio" name="alterEgo" id="peach" value="peach">
+                    <input aria-label="hidden" type="radio" name="alterEgo" id="peach" value="peach">
+
                     <label for="bun">Batman</label>
-                    <input type="radio" name="alterEgo" id="bun" value="bun">
+                    <input aria-label="hidden" type="radio" name="alterEgo" id="bun" value="bun">
                 </div>
                 <div>
-                    <input type="submit" value="Next!">
+                    <input onclick="window.location='#questionFour'" type="submit" value="Next!">
                 </div>
             </fieldset>
         </form>
@@ -103,14 +107,16 @@
                 <h2>Whatcha Wanna Do?</h2>
                 <div class="options">
                     <label for="bun">Read</label>
-                    <input type="radio" name="activity" id="bun" value="bun">
+                    <input aria-label="hidden" type="radio" name="activity" id="bun" value="bun">
+
                     <label for="parsley">Adventure</label>
-                    <input type="radio" name="activity" id="parsley" value="parsley">
+                    <input aria-label="hidden" type="radio" name="activity" id="parsley" value="parsley">
+                    
                     <label for="peach">Cuddle</label>
-                    <input type="radio" name="activity" id="peach" value="bun">
+                    <input aria-label="hidden" type="radio" name="activity" id="peach" value="bun">
                 </div>
                 <div>
-                    <input type="submit" value="See Ur Hog!">
+                    <input onclick="window.location='#result'" type="submit" value="See Ur Hog!">
                 </div>
             </fieldset>
         </form>

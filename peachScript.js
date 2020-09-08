@@ -50,18 +50,16 @@ $(document).ready(function() {
         console.log(peachPoints, parsleyPoints, bunPoints);
     });
 
-
-    
     //when you click the finalSubmit button
-    $("input:submit[value=See Ur Hog!]".on('submit', function(e) {
-        e.preventDefault();
-        
-        $('.resultHog').text(`${chosenHog}`)
-
-    });
+    //show the hog with the most points name
+    // and their image toggleClass to .showMe
     
+    // $("input:submit[value=See Ur Hog!]").on('submit', function(e) {
+    //     e.preventDefault();
+    //     //find a way to compare all three variables to find highest score
+    //     //make an array of objects to compare? or just an object?
+    //     $('.resultHog').text(`${chosenHog}`)
 
-    //change the img tag in .final to be that hog's image
-
+    // });
 
 });
