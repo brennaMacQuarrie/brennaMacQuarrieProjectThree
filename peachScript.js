@@ -1,17 +1,3 @@
-// const pointsArr = [
-//     {
-//         peachPoints: 0,
-//         name: "peach",
-//     },
-//     {
-//         parsleyPoints: 0,
-//         name: "parsley",
-//     },
-//     {
-//         bunPoints: 0,  
-//         name: "bun",
-//     } 
-
 
 $(document).ready(function() {
     $('.hamburg').click(function () {
@@ -19,13 +5,14 @@ $(document).ready(function() {
         $('.menu').toggleClass('active');
     });
 
-    // let peachPoints = 0;
-    // let parsleyPoints = 0;
-    // let bunPoints = 0;
+    let peachPoints = 0;
+    let parsleyPoints = 0;
+    let bunPoints = 0;
 
 
     $('label').on('click', function() {
-        //this is for the visual
+        //this is for the pink clicked background,
+        //how do i toggle off when another is selected?
         $(this).toggleClass('selected');
     });
 
@@ -34,7 +21,7 @@ $(document).ready(function() {
 
         if ($("input:radio[id=peach]").is(":checked")) {
             peachPoints++;
-            // pointsArr.peach
+            // hogs.peach++
         } else if ($("input:radio[id=parsley]").is(":checked")) {
             parsleyPoints++;
         } else if ($("input:radio[id=bun]").is(":checked")) {
@@ -53,6 +40,13 @@ $(document).ready(function() {
     //show the hog with the most points name
     // and their image toggleClass to .showMe
 
+    //const hogs = {
+        // peach: 0,
+        // parlsey: 0,
+        // bun: 0,
+
+
+    //}
     // make array of all variables
     // create largest variable
     // loop over array
