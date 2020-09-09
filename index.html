@@ -15,17 +15,17 @@
 </head>
 <body>
     <a class="skipButton" href="#maincontent">skip to main content.</a>
+
     <header id="home">
         <div class="top wrapper">
-            <img src="./assets/textonly.png" alt="welcome to prickly peach hedgehogs!" class="logo">
-            <h1>which hog should you hog?</h1>
             <nav>
+                <img src="./assets/textonly.png" alt="welcome to prickly peach hedgehogs!" class="logo">
                 <div aria-label="click here for the menu." class="hamburg">
                     <div class="one"></div>
                     <div class="two"></div>
                     <div class="three"></div>
                 </div>
-
+                
                 <div class="menu">
                     <ul>
                         <li><a href="#">Restart</a></li>
@@ -35,14 +35,18 @@
                     </ul>
                 </div>
             </nav>
+            <div class="mainPage">
+                <h1>which hog should you hog?</h1>
+                <a class="button" href="#questionOne">Start!<a>
+            </div>
         </div>
-        <a class="startButton button" href="#questionOne">Start!</a>
     </header>
 
     <section class="page" id="questionOne">
-        <form action="">
-            <fieldset class="questionOne">
-                <h2>Pick a Color!</h2>
+        <h2>Pick a Color!</h2>
+        <form action="" class=
+        "questionOne">
+            <!-- <fieldset class="questionOne"> -->
                 <div class="options">
                     <label for="peach">Blush</label>
                     <input aria-label="hidden" type="radio" name="color" id="peach" value="peach">
@@ -56,14 +60,14 @@
                 <div>
                     <input onclick="window.location='#questionTwo'" type="submit" value="Next!">
                 </div>
-            </fieldset>
+            <!-- </fieldset> -->
         </form>
     </section>
 
     <section class="page" id="questionTwo">
-        <form action="">
-            <fieldset class="questionTwo">
-                <h2>Ur Fave Food?</h2>
+        <h2>Ur Fave Food?</h2>
+        <form action="" class="questionTwo">
+            <!-- <fieldset class="questionTwo"> -->
                 <div class="options">
                     <label for="parsley">Nuts</label>
                     <input aria-label="hidden" type="radio" name="food" id="parsley" value="parsley">
@@ -77,14 +81,14 @@
                 <div>
                     <input onclick="window.location='#questionThree'"type="submit" value="Next!">
                 </div>
-            </fieldset>
+            <!-- </fieldset> -->
         </form>
     </section>
 
     <section class="page" id="questionThree">
-        <form action="">
-            <fieldset class="questionThree">
-                <h2>Your Alter Ego?</h2>
+        <h2>Your Alter Ego?</h2>
+        <form action="" class="questionThree">
+            <!-- <fieldset class="questionThree"> -->
                 <div class="options">
                     <label for="parsley">Aladdin</label>
                     <input aria-label="hidden" type="radio" name="alterEgo" id="parsley" value="parsley">
@@ -98,14 +102,14 @@
                 <div>
                     <input onclick="window.location='#questionFour'" type="submit" value="Next!">
                 </div>
-            </fieldset>
+            <!-- </fieldset> -->
         </form>
     </section>
 
     <section class="page" id="questionFour">
-        <form action="">
-            <fieldset class="questionFour">
-                <h2>Whatcha Wanna Do?</h2>
+        <h2>Whatcha Wanna Do?</h2>
+        <form action="" class="questionFour">
+            <!-- <fieldset class="questionFour"> -->
                 <div class="options">
                     <label for="bun">Read</label>
                     <input aria-label="hidden" type="radio" name="activity" id="bun" value="bun">
@@ -117,25 +121,34 @@
                     <input aria-label="hidden" type="radio" name="activity" id="peach" value="bun">
                 </div>
                 <div>
-                    <input onclick="window.location='#result'" type="submit" value="See Ur Hog!" id="done">
+                    <input onclick="window.location='#resultPage'" type="submit" value="See Ur Hog!" id="done">
                 </div>
-            </fieldset>
+            <!-- </fieldset> -->
         </form>
     </section>
 
-    <section class="final" id="result">
-        <h2>Congrats! You Got:</h2>
-        <img   id="peach" src="./assets/peach.png" alt="Peach!">
-        <img  id="parsley" src="./assets/parsley.png" alt="Parsley!">
-        <img  class="showMe" id="bun" src="./assets/bun.png" alt="Bun!">
+
+    <section class="page" id="resultPage">
+        <div class="finalPage">
+            <h2>Congrats! You Got:</h2>
+
+            <img class="showMe" id="peach" src="./assets/peach.png" alt="Peach!">
+            <img id="parsley" src="./assets/parsley.png" alt="Parsley!">
+            <img id="bun" src="./assets/bun.png" alt="Bun!">
 
 
-        <h3 class="resultHog"></h3>
+            <h3 class="resultHog">Peach</h3>
 
 
-        <a href="https://www.pricklypeachhedgehogs.com/form" class="orderButton button">Order Me!</a>
-        <a class="retake" href="#home">Click Here to Take the Quiz Again</a>
+            <a href="https://www.pricklypeachhedgehogs.com/form" class="orderButton button">Order Me!</a>
+            
+            <a class="retake" href="#home">Click Here to Take the Quiz Again</a>
+        </div>
     </section>
+
+
+
+
 
 
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>

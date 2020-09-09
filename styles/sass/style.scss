@@ -1,5 +1,5 @@
 @import "setup";
-@import "hamburger";
+@import "header";
 @import "mediaQueries";
 
 // VARIABLES
@@ -39,6 +39,9 @@ $height : 50%;
 
 
 // -------------------------------------- STYLE STRIPPING
+// * {
+//     border: red 2px solid;
+// }
 html {
     font-size: 62.5%;
 }
@@ -70,72 +73,61 @@ a {
 // --------------------MAIN PAGES STYLING
 input[type=submit],
 .button {
+    font-size: calc(2rem + 1vw);
+    font-weight: 900;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 3px;
     background: $maingreen;
+    
     padding: 10px 50px;
     border: double transparent 3px;
     border-radius: 5px;
     box-shadow: 5px 5px rgba(128, 128, 128, 0.5);
-    margin-bottom: 60px;
-    background: $maingreen;
-    font-weight: 900;
-    color: white;
     transition: all 0.3s;
-    font-size: calc(2rem + 1.3vw);
 }
 input[type=submit]:hover,
 input[type=submit]:focus,
 .button:hover,
 .button:focus {
+    color: white;
     background-color: #F8BCB3;
     border: double white 3px;
     box-shadow: 5px 5px rgba(207, 207, 207, 0.5);
-    color: white;
 }
 .orderButton {
     font-style: italic;
 }
 
-.page,
-.final {
+.page {
     height: 100vh;
+    padding: 30px 0;
     border: 8px double #1e4e22;
     border-radius: 5px;
-}
-.questionOne,
-.questionTwo,
-.questionThree,
-.questionFour,
-.final {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-    padding: 30px 0;
+    // align-items: center;
 }
 
-h2 {
-    font-size: calc(3rem + 2vw);
-    text-align: center;
-    color: $maingreen;
-    display: inline-block;
-    position: relative;
-    font-style: italic;
-    font-weight: 900;
-    z-index: 5;
+.top,
+.finalPage,
+.questionOne,
+.questionTwo,
+.questionThree,
+.questionFour {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
 }
-h2::after,
-h3::after {
-    @include afterUnderline(50%);
-    width: 90%;
-    background-color: rgba(248, 188, 179,0.4);
-    left: 5%;
-}
+
 .options {
     border: 4px double #F8BCB3;
     width: 60%;
-    height: 40%;
-    padding: 0;
+    height: 60%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -185,37 +177,46 @@ label:focus,
 }
 
 // ----------------------------- RESULT IMAGE
-.final img {
+
+
+.finalPage img {
     display: none;
+    margin: 0 auto;
 }
-img.showMe {
-    display: inline-block;
-}
-img {
-    height: 50%;
-    width: auto;
+.finalPage img.showMe {
+    display: block;
+    width: 40%;
 }
 
-h3 {
-    color: #dfa79f;
-    font-size: 4rem;
-    padding: 0;
-    margin: 40px auto;
-    text-transform: uppercase;
+
+h2 {
+    font-size: calc(3rem + 2vw);
+    text-align: center;
+    color: $maingreen;
     font-style: italic;
+    font-weight: 900;
+    margin: 0 auto 40px;
+    z-index: 5;
     position: relative;
 }
-h3::before {
-    content: "";
-    display: inline-block;
-    width: 90%;
-    height: 50%;
+h3 {
+    font-size: 4.5rem;
+    text-align: center;
+    color: #dfa79f;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    padding: 0;
+    margin: 20px auto;
+    position: relative;
+    // top: -40px;
+}
+h2::after,
+h3::after {
+    @include afterUnderline(50%);
     background-color: rgba(248, 188, 179,0.4);
-    position: absolute;
-    bottom: 0;
+    width: 90%;
     left: 5%;
-    transition: all 0.4s;
-    z-index: -1;
 }
 
 .retake {

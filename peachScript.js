@@ -21,7 +21,7 @@ pricklyPeach.labelStyles = function() {
     });
 }
 
-pricklyPeach.displayHog = function() {
+pricklyPeach.hogPoints = function() {
     $('form').on('submit', function(e) {
         e.preventDefault();
     
@@ -32,53 +32,47 @@ pricklyPeach.displayHog = function() {
         } else if ($('input:radio[id=bun]').is(':checked')) {
             pricklyPeach.hogs.bun += 1;
         }
-    
         console.log(pricklyPeach.hogs);
-
-        
-    // });
-    //function to find chosenHog
-    //-target THIS button
-    // $('#done').on('submit', function(e) {
-    //     e.preventDefault();
-    
-        console.log(`submit?`);
-    
-        let chosenHog = pricklyPeach.hogs[0];
-    
-        for (let hog in pricklyPeach.hogs) {
-            if (hog > pricklyPeach.hogs) {
-                chosenHog = hog;
-                $(`.final img[id=${chosenHog}]`).toggleClass('showMe');
-            }
-        }
-        console.log(chosenHog);
-        $('.resultHog').text(`result here!`);
     });
 }
+    
+    
+    //function to show chosenHog
+pricklyPeach.displayHog = function() {
+        
+        //-target THIS button
+        $('#done').on('submit', function(e) {
+            e.preventDefault();
 
-//when you click the finalSubmit button
-//show the hog with the most points name
-// and their image toggleClass to .showMe
+            console.log(`SUBMIT`);
 
-// for in loop over object
-//     if current is larger than array[i], current= array[i]
+            let chosenHog = pricklyPeach.hogs.peach;
+    
+            for (let hog in pricklyPeach.hogs) {
+                if (hog > chosenHog) {
+                    chosenHog = hog;
+                    $(`.final img[id=${chosenHog}]`).toggleClass('showMe');
+                }
+            }
+            console.log(chosenHog);
+            $('.resultHog').text(`result here!`);
 
-// $("input:submit[value=See Ur Hog!]").on('submit', function(e) {
-//     e.preventDefault();
-//     //find a way to compare all three variables to find highest score
-//     //make an array of objects to compare? or just an object?
-//     $('.resultHog').text(`${chosenHog}`)
+        });
+}
 
-// });
-
+pricklyPeach.reset = function() {
+    $('.retake').on('click', function() {
+        //to reset form
+    });
+}
 
 
 // BUILD INIT FUNC
 pricklyPeach.init = function() {
     pricklyPeach.hamburger();
     pricklyPeach.labelStyles();
-    pricklyPeach.displayHog();
+    pricklyPeach.hogPoints();
+    pricklyPeach.reset();
 }
 // DOCUMENT READY
 $(document).ready(function() {
