@@ -6,6 +6,8 @@ pricklyPeach.hogs = {
     parsley: 0,
     bun: 0,
 }
+
+// function to make my burger menu appear
 pricklyPeach.hamburger = function() {
     $('.hamburg').click(function () {
         $(this).toggleClass('active');
@@ -13,16 +15,10 @@ pricklyPeach.hamburger = function() {
     });
 }
 
-pricklyPeach.labelStyles = function() {
-    $('label').on('click', function() {
-        $(this).toggleClass('selected');
-        //this is for the pink clicked background,
-        //how do i toggle off when another is selected?
-    });
-}
 
+// function to determine the hog champion of points
 pricklyPeach.hogPoints = function() {
-    $('form').on('submit', function(e) {
+    $('.addPoints').on('submit', function(e) {
         e.preventDefault();
     
         if ($('input:radio[id=peach]').is(':checked')) {
@@ -35,9 +31,8 @@ pricklyPeach.hogPoints = function() {
         console.log(pricklyPeach.hogs);
     });
 }
-    
-    
-    //function to show chosenHog
+
+//function to show user generated hog
 pricklyPeach.displayHog = function() {
         
         //-target THIS button
@@ -46,19 +41,30 @@ pricklyPeach.displayHog = function() {
 
             console.log(`SUBMIT`);
 
-            let chosenHog = pricklyPeach.hogs.peach;
+            let winningScore = 0;
+            let chosenHog = "";
     
             for (let hog in pricklyPeach.hogs) {
-                if (hog > chosenHog) {
-                    chosenHog = hog;
-                    $(`.final img[id=${chosenHog}]`).toggleClass('showMe');
+                console.log(hog)
+
+                const score = pricklyPeach.hogs[hog];
+
+                if (score > winningScore) {
+                    winningScore = score;
+                    chosenHog = hog;   
                 }
             }
-            console.log(chosenHog);
-            $('.resultHog').text(`result here!`);
+            // to change image on last page
+            $(`.finalPage img[id=${chosenHog}]`).toggleClass('showMe');
+
+            // to change h3 on last page
+            $('.resultHog').text(`${chosenHog}`);
 
         });
 }
+
+
+
 
 pricklyPeach.reset = function() {
     $('.retake').on('click', function() {
@@ -70,8 +76,8 @@ pricklyPeach.reset = function() {
 // BUILD INIT FUNC
 pricklyPeach.init = function() {
     pricklyPeach.hamburger();
-    pricklyPeach.labelStyles();
     pricklyPeach.hogPoints();
+    pricklyPeach.displayHog();
     pricklyPeach.reset();
 }
 // DOCUMENT READY

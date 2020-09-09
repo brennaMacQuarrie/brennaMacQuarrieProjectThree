@@ -35,7 +35,7 @@
                     </ul>
                 </div>
             </nav>
-            <div class="mainPage">
+            <div class="mainPage" id="maincontent">
                 <h1>which hog should you hog?</h1>
                 <a class="button" href="#questionOne">Start!<a>
             </div>
@@ -45,99 +45,110 @@
     <section class="page" id="questionOne">
         <h2>Pick a Color!</h2>
         <form action="" class=
-        "questionOne">
-            <!-- <fieldset class="questionOne"> -->
-                <div class="options">
-                    <label for="peach">Blush</label>
-                    <input aria-label="hidden" type="radio" name="color" id="peach" value="peach">
+        "questionOne addPoints">
+            <div class="options">
+                <input aria-label="hidden" type="radio" name="color" id="peach" value="peach">
+                <label for="peach">Blush</label>
 
-                    <label for="parsley">Cinnamon</label>
-                    <input aria-label="hidden" type="radio" name="color" id="parsley" value="parsley">
+                <input aria-label="hidden" type="radio" name="color" id="parsley" value="parsley">
+                <label for="parsley">Cinnamon</label>
 
-                    <label for="bun">Charcoal</label>
-                    <input aria-label="hidden" type="radio" name="color" id="bun" value="bun">
-                </div>
-                <div>
-                    <input onclick="window.location='#questionTwo'" type="submit" value="Next!">
-                </div>
-            <!-- </fieldset> -->
+                <input aria-label="hidden" type="radio" name="color" id="bun" value="bun">
+                <label for="bun">Charcoal</label>
+            </div>
+            <div>
+                <input onclick="window.location='#questionTwo'" type="submit" value="Next!">
+            </div>
         </form>
     </section>
 
     <section class="page" id="questionTwo">
         <h2>Ur Fave Food?</h2>
-        <form action="" class="questionTwo">
-            <!-- <fieldset class="questionTwo"> -->
-                <div class="options">
-                    <label for="parsley">Nuts</label>
-                    <input aria-label="hidden" type="radio" name="food" id="parsley" value="parsley">
+        <form action="" class="questionTwo addPoints">
+            <div class="options">
+                <input aria-label="hidden" type="radio" name="food" id="parsley" value="parsley">
+                <label for="parsley">Nuts</label>
 
-                    <label for="peach">Fruits</label>
-                    <input aria-label="hidden" type="radio" name="food" id="peach" value="peach">
-                    
-                    <label for="bun">Ice Cream</label>
-                    <input aria-label="hidden" type="radio" name="food" id="bun" value="bun">
-                </div>
-                <div>
-                    <input onclick="window.location='#questionThree'"type="submit" value="Next!">
-                </div>
-            <!-- </fieldset> -->
+                <input aria-label="hidden" type="radio" name="food" id="bun" value="bun">
+                <label for="bun">Ice Cream</label>
+
+                <input aria-label="hidden" type="radio" name="food" id="peach" value="peach">
+                <label for="peach">Fruits</label>
+            </div>
+            <div>
+                <input onclick="window.location='#questionThree'"type="submit" value="Next!">
+            </div>
         </form>
     </section>
 
     <section class="page" id="questionThree">
         <h2>Your Alter Ego?</h2>
-        <form action="" class="questionThree">
-            <!-- <fieldset class="questionThree"> -->
-                <div class="options">
-                    <label for="parsley">Aladdin</label>
-                    <input aria-label="hidden" type="radio" name="alterEgo" id="parsley" value="parsley">
+        <form action="" class="questionThree addPoints">
+            <div class="options">
+                <input aria-label="hidden" type="radio" name="alterEgo" id="parsley" value="parsley">
+                <label for="parsley">Aladdin</label>
 
-                    <label for="peach">Elastigirl</label>
-                    <input aria-label="hidden" type="radio" name="alterEgo" id="peach" value="peach">
+                <input aria-label="hidden" type="radio" name="alterEgo" id="peach" value="peach">
+                <label for="peach">Elastigirl</label>
 
-                    <label for="bun">Batman</label>
-                    <input aria-label="hidden" type="radio" name="alterEgo" id="bun" value="bun">
-                </div>
-                <div>
-                    <input onclick="window.location='#questionFour'" type="submit" value="Next!">
-                </div>
-            <!-- </fieldset> -->
+                <input aria-label="hidden" type="radio" name="alterEgo" id="bun" value="bun">
+                <label for="bun">Batman</label>
+            </div>
+            <div>
+                <input onclick="window.location='#questionFour'" type="submit" value="Next!">
+            </div>
         </form>
     </section>
 
     <section class="page" id="questionFour">
-        <h2>Whatcha Wanna Do?</h2>
-        <form action="" class="questionFour">
-            <!-- <fieldset class="questionFour"> -->
-                <div class="options">
-                    <label for="bun">Read</label>
-                    <input aria-label="hidden" type="radio" name="activity" id="bun" value="bun">
+        <h2>Pick A Hat!</h2>
+        <form action="" class="questionFour addPoints">
+            <div class="options">
+                <input aria-label="hidden" type="radio" name="hats" id="parsley" value="parsley">
+                <label for="parsley">Ball Cap</label>
+    
+                <input aria-label="hidden" type="radio" name="hats" id="bun" value="bun">
+                <label for="bun">Beanie</label>
 
-                    <label for="parsley">Adventure</label>
-                    <input aria-label="hidden" type="radio" name="activity" id="parsley" value="parsley">
-                    
-                    <label for="peach">Cuddle</label>
-                    <input aria-label="hidden" type="radio" name="activity" id="peach" value="bun">
-                </div>
-                <div>
-                    <input onclick="window.location='#resultPage'" type="submit" value="See Ur Hog!" id="done">
-                </div>
-            <!-- </fieldset> -->
+                <input aria-label="hidden" type="radio" name="hats" id="peach" value="peach">
+                <label for="peach">Ear Muffs</label>
+            </div>
+            <div>
+                <input onclick="window.location='#questionFive'" type="submit" value="Next!">
+            </div>
+        </form>
+    </section>
+
+    <section class="page" id="questionFive">
+        <h2>Whatcha Wanna Do?</h2>
+        <form action="" class="questionFive addPoints" id="done">
+            <div class="options">
+                <input aria-label="hidden" type="radio" name="activity" id="bun" value="bun">
+                <label for="bun">Read</label>
+
+                <input aria-label="hidden" type="radio" name="activity" id="parsley" value="parsley">
+                <label for="parsley">Adventure</label>
+                
+                <input aria-label="hidden" type="radio" name="activity" id="peach" value="bun">
+                <label for="peach">Snuggle</label>
+            </div>
+            <div>
+                <input onclick="window.location='#resultPage'" type="submit" value="See Ur Hog!">
+            </div>
         </form>
     </section>
 
 
     <section class="page" id="resultPage">
+        <h2>Congrats! You Got:</h2>
         <div class="finalPage">
-            <h2>Congrats! You Got:</h2>
 
-            <img class="showMe" id="peach" src="./assets/peach.png" alt="Peach!">
+            <img id="peach" src="./assets/peach.png" alt="Peach!">
             <img id="parsley" src="./assets/parsley.png" alt="Parsley!">
             <img id="bun" src="./assets/bun.png" alt="Bun!">
 
 
-            <h3 class="resultHog">Peach</h3>
+            <h3 class="resultHog"></h3>
 
 
             <a href="https://www.pricklypeachhedgehogs.com/form" class="orderButton button">Order Me!</a>
@@ -153,5 +164,7 @@
 
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <script src="peachScript.js"></script>
+
+
 </body>
 </html>
