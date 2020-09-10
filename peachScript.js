@@ -17,26 +17,35 @@ pricklyPeach.hamburger = function() {
 
 
 // function to determine the hog champion of points
-pricklyPeach.hogPoints = function() {
-    $('.addPoints').on('submit', function(e) {
+// pricklyPeach.hogPoints = function() {
+//     $('.addPoints').on('submit', function(e) {
+//         e.preventDefault();
+
+//         if ($(`input[value="${peach}"]`)) {
+//             pricklyPeach.hogs.peach += 1;
+//             //${this} += 1;
+
+//         } else if ($(`input[value="${parsley}"]`))   {
+//             pricklyPeach.hogs.parsley += 1;
+
+//         } else if ($(`input[value="${bun}"]`))   {
+//             pricklyPeach.hogs.bun += 1;
+
+//         }
+
+//         console.log(pricklyPeach.hogs);
+//     });
+// }
+
+pricklyPeach.hogPoints = function () {
+    $('.addPoints').on('submit', function (e) {
         e.preventDefault();
 
-        if ($("input:radio[value=peach]:checked")) {
-            pricklyPeach.hogs.peach += 1;
-            //${this} += 1;
-
-        } else if ($("input:radio[value=parsley]:checked"))   {
-            pricklyPeach.hogs.parsley += 1;
-
-        } else if ($("input:radio[value='bun']:checked"))   {
-            pricklyPeach.hogs.bun += 1;
-
-        }
-
+        let answer = $(this).find('input:checked').val();
+        pricklyPeach.hogs[answer] += 1
         console.log(pricklyPeach.hogs);
     });
 }
-
 
 
 
