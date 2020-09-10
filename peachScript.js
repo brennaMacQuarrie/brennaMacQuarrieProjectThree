@@ -20,17 +20,26 @@ pricklyPeach.hamburger = function() {
 pricklyPeach.hogPoints = function() {
     $('.addPoints').on('submit', function(e) {
         e.preventDefault();
-    
-        if ($('input:radio[id=peach]').is(':checked')) {
+
+        if ($("input:radio[value=peach]:checked")) {
             pricklyPeach.hogs.peach += 1;
-        } else if ($('input:radio[id=parsley]').is(':checked')) {
+            //${this} += 1;
+
+        } else if ($("input:radio[value=parsley]:checked"))   {
             pricklyPeach.hogs.parsley += 1;
-        } else if ($('input:radio[id=bun]').is(':checked')) {
+
+        } else if ($("input:radio[value='bun']:checked"))   {
             pricklyPeach.hogs.bun += 1;
+
         }
+
         console.log(pricklyPeach.hogs);
     });
 }
+
+
+
+
 
 //function to show user generated hog
 pricklyPeach.displayHog = function() {
@@ -62,16 +71,14 @@ pricklyPeach.displayHog = function() {
 
 
 
-//TODO -----------------------------RESET QUIZ
 pricklyPeach.reset = function() {
-    $('.retake').on('submit', function() {
-    //     //to reset form
-    //     console.log('RESET?!')
-    //     $("input").empty();
-    console.log("button")
-    location.reload();
-        // $('input[type=radio]').prop("checked", false);
-        // $('input[type=radio]').attr("checked", false);
+
+    $('.retake').on('click', function() {
+
+        $(`input:checked`).prop(`checked`, ``);
+        for (let hog in pricklyPeach.hogs) {
+            pricklyPeach.hogs[hog] = 0;
+        }
     });
 }
 
@@ -83,6 +90,7 @@ pricklyPeach.init = function() {
     pricklyPeach.displayHog();
     pricklyPeach.reset();
 }
+
 // DOCUMENT READY
 $(document).ready(function() {
 
