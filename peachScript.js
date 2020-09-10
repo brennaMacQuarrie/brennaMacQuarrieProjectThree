@@ -39,13 +39,10 @@ pricklyPeach.displayHog = function() {
         $('#done').on('submit', function(e) {
             e.preventDefault();
 
-            console.log(`SUBMIT`);
-
             let winningScore = 0;
             let chosenHog = "";
     
             for (let hog in pricklyPeach.hogs) {
-                console.log(hog)
 
                 const score = pricklyPeach.hogs[hog];
 
@@ -65,10 +62,16 @@ pricklyPeach.displayHog = function() {
 
 
 
-
+//TODO -----------------------------RESET QUIZ
 pricklyPeach.reset = function() {
-    $('.retake').on('click', function() {
-        //to reset form
+    $('.retake').on('submit', function() {
+    //     //to reset form
+    //     console.log('RESET?!')
+    //     $("input").empty();
+    console.log("button")
+    location.reload();
+        // $('input[type=radio]').prop("checked", false);
+        // $('input[type=radio]').attr("checked", false);
     });
 }
 

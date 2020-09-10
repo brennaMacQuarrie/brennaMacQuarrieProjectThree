@@ -54,7 +54,7 @@ nav {
 }
 
 h1 {
-    font-size: calc(4rem + 2vw);
+    font-size: calc(3.5rem + 2vw);
     font-weight: 300;
     color: rgb(124, 124, 124);
     text-shadow: 2px 2px 4px #000000;
@@ -109,6 +109,7 @@ div.three {
     height: auto;
     display: none;
     transition: all 0.5s;
+    z-index: 20;
 }
 .menu ul {
     margin-top: 10px;
@@ -118,7 +119,7 @@ div.three {
     padding: 10px;
     display: block;
     color: #95cab9;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.7);
     transition: all 0.3s;
 }
 .menu ul li:hover {
