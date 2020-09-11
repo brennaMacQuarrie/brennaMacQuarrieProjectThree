@@ -40,16 +40,14 @@ pricklyPeach.displayHog = function() {
             for (let hog in pricklyPeach.hogs) {
 
                 const score = pricklyPeach.hogs[hog];
-
+//TODO how do i deal with tie score? 
                 if (score > winningScore) {
                     winningScore = score;
                     chosenHog = hog;   
                 }
             }
-            // to change image on last page
             $(`.finalPage img[id=${chosenHog}]`).toggleClass('showMe');
 
-            // to change h3 on last page
             $('.resultHog').text(`${chosenHog}`);
 
         });

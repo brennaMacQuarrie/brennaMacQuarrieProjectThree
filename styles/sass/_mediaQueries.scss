@@ -1,14 +1,17 @@
 
-
+@media (max-width: 650px) {
+    //TODO ------- WHY ISNT THIS GETTING WIDER GDIT
+        .options {
+            width: 80%;
+        }  
+    
+}
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
     .mainPage h1::after {
         height: 80%;
         bottom: 10%;
-    }
-    .addPoints .options {
-        width: 70%;
     }
     .page h2,
     .page h3 {
@@ -21,7 +24,5 @@
         .retake {
             font-size: 1.2rem;
         }
-    }
-
-    
+    }   
 }
