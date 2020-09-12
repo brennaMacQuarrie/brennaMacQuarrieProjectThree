@@ -516,8 +516,8 @@ a.button {
   border: none;
   border-radius: 12px;
   background: #b0ddd1;
-  -webkit-box-shadow: 10px 10px 30px #69ac97,  -13px -13px 30px #b5fde6;
-          box-shadow: 10px 10px 30px #69ac97,  -13px -13px 30px #b5fde6;
+  -webkit-box-shadow: 5px 5px rgba(128, 128, 128, 0.5);
+          box-shadow: 5px 5px rgba(128, 128, 128, 0.5);
   padding: 1% 4%;
   margin: 0 auto;
   -webkit-transition: all 0.3s;
@@ -609,7 +609,7 @@ input[type=submit]:focus,
 .questionFour .options label,
 .questionFive .options label {
   font-size: calc(1.7rem + 0.8vw);
-  padding: 10px 0;
+  padding: 10px 3px;
   margin: 0 auto;
   width: 60%;
   border: 2px double transparent;
@@ -760,10 +760,10 @@ h3::after {
 }
 
 .retake {
-  font-size: 13px;
-  font-weight: 100;
+  font-size: 15px;
+  font-weight: 300;
   margin: 15px auto;
-  color: #308137;
+  color: black;
   letter-spacing: 3px;
   border-radius: 5px;
   text-align: center;
