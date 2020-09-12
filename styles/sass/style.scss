@@ -3,7 +3,7 @@
 @import "mediaQueries";
 
 // VARIABLES
-$maingreen : #94ccba;
+$maingreen : #b0ddd1;
 $height : 50%;
 
 // MIXINS
@@ -29,11 +29,11 @@ a.button {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-weight: 900;
-    border: 1px solid transparent;
+    border: none;
     border-radius: 12px;
     background: $maingreen;
-    box-shadow:  13px 13px 24px #69ac97, 
-            -13px -13px 24px #a4ffe2;
+    box-shadow:  10px 10px 30px #69ac97, 
+            -13px -13px 30px #b5fde6;
     
     padding: 1% 4%;
     margin: 0 auto;
@@ -45,10 +45,9 @@ input[type=submit]:focus,
 .button:hover,
 .button:focus {
     background: #F8BCB3;
-    border: solid white 1px;
     border-radius: 12px;
-    box-shadow:  13px 13px 24px #c99288, 
-            -13px -13px 24px #ffdcdc;
+    box-shadow:  10px 10px 30px #c99288, 
+            -13px -13px 30px #ffdcdc;
 }
 
 
@@ -81,19 +80,17 @@ input[type=submit]:focus,
     width: 100%;
     height: 100%;
     .options {
-        // border: 4px double #F8BCB3;
         width: 60%;
         height: 60%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-
         border-radius: 30px;
         background: linear-gradient(-45deg, rgba(73, 73, 73, 0.22), rgba(255, 255, 255, 0.733));
         box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
         -8px -8px 12px 0 rgba(255, 255, 255, 0.541);
         label {
-            font-size: calc(1.3rem + 0.8vw);
+            font-size: calc(1.7rem + 0.8vw);
             padding: 10px 0;
             margin: 0 auto;
             width: 60%;
@@ -197,7 +194,6 @@ h3::after {
     letter-spacing: 5px;
     font-weight: 900;
     background: $maingreen;
-    border: double transparent 3px;
     border-radius: 5px;
     box-shadow: 5px 5px rgba(128, 128, 128, 0.5);
     padding: 5px 10px;

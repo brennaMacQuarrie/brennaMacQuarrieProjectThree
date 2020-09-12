@@ -1,6 +1,6 @@
 
 
-$maingreen : #a8daca;
+$maingreen : #b0ddd1;
 $height : 50%;
 
 @mixin afterUnderline($width) {
@@ -66,7 +66,7 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
-    border: 4px double #4e504e;
+    border: 8px double #1e4e22;
     border-radius: 5px;
 }
 
@@ -95,6 +95,7 @@ header {
         height: 100%;
     }
 }
+
 
 
 h1 {
@@ -147,8 +148,8 @@ div.three {
     text-transform: uppercase;
     text-align: right;
     position: absolute;
-    top: 90px;
-    right: 30px;
+    top: 100px;
+    right: 8%;
     padding: 0;
     height: auto;
     display: none;

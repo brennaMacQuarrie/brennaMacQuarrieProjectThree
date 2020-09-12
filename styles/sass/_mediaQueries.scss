@@ -1,8 +1,8 @@
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
     //TODO ------- WHY ISNT THIS GETTING WIDER GDIT
     .page .addPoints .options {
-        width: 80%;
+        width: 70%;
     }
     
 }
@@ -12,6 +12,9 @@
     .mainPage h1::after {
         height: 80%;
         bottom: 10%;
+    }
+    .page .addPoints .options {
+        width: 80%;
     }
     .page h2,
     .page h3 {
