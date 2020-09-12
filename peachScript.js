@@ -9,57 +9,62 @@ pricklyPeach.hogs = {
 
 // function to make my burger menu appear
 pricklyPeach.hamburger = function() {
-    $('.hamburg').click(function () {
-        $(this).toggleClass('active');
-        $('.menu').toggleClass('active');
+    $(`.hamburg`).click(function () {
+        $(this).toggleClass(`active`);
+        $(`.menu`).toggleClass(`active`);
     });
 }
 
-
+//function to send points into object of hogs (come on. "object of hogs?!?" lollllll)
 pricklyPeach.hogPoints = function () {
-    $('.addPoints').on('submit', function (e) {
+    $(`.addPoints`).on(`submit`, function (e) {
         e.preventDefault();
 
-        let answer = $(this).find('input:checked').val();
+        let answer = $(this).find(`input:checked`).val();
         pricklyPeach.hogs[answer] += 1
         console.log(pricklyPeach.hogs);
     });
 }
 
 
-//function to show user generated hog
+//function to get & display user generated hog
 pricklyPeach.displayHog = function() {
         
-        //-target THIS button
-        $('#done').on('submit', function(e) {
-            e.preventDefault();
+    $(`#done`).on(`submit`, function(e) {
+        e.preventDefault();
 
-            let winningScore = 0;
-            let chosenHog = "";
-    
-            for (let hog in pricklyPeach.hogs) {
+        let winningScore = 0;
+        let chosenHog = "";
 
-                const score = pricklyPeach.hogs[hog];
-//TODO how do i deal with tie score? 
-                if (score > winningScore) {
-                    winningScore = score;
-                    chosenHog = hog;   
-                }
-            }
-            $(`.finalPage img[id=${chosenHog}]`).toggleClass('showMe');
+        for (let hog in pricklyPeach.hogs) {
+            const score = pricklyPeach.hogs[hog];
+            
+            // does this do what i want it to do? does it do anything???
+            if (score == winningScore) {
+                chosenHog = hog;
+            } else if (score > winningScore) {
+                winningScore = score;
+                chosenHog = hog;   
+            } 
+        }
+        console.log(chosenHog);
+        $(`.finalPage img[id=${chosenHog}]`).toggleClass(`showMe`);
 
-            $('.resultHog').text(`${chosenHog}`);
+        $(`.resultHog`).text(`${chosenHog}`);
 
-        });
+    });
 }
 
 
-
+//function to reset the quiz 
 pricklyPeach.reset = function() {
 
-    $('.retake').on('click', function() {
+    $(`.retake`).on(`click`, function() {
 
         $(`input:checked`).prop(`checked`, ``);
+        $(`.finalPage img`).removeClass(`showMe`);
+        $(`.resultHog`).text("");
+
         for (let hog in pricklyPeach.hogs) {
             pricklyPeach.hogs[hog] = 0;
         }

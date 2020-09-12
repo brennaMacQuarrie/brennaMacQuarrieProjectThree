@@ -3,7 +3,7 @@
 @import "mediaQueries";
 
 // VARIABLES
-$maingreen : #a8daca;
+$maingreen : #94ccba;
 $height : 50%;
 
 // MIXINS
@@ -14,54 +14,6 @@ $height : 50%;
     bottom: 0;
     z-index: -1;
     height: $height;
-}
-
-
-// -------------------------------------- STYLE STRIPPING
-html {
-    font-size: 62.5%;
-}
-body {
-    font-size: 1.6rem;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 3px;
-    overflow-x: hidden;
-}
-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-.wrapper {
-    width: 90%;
-    max-width: 1500px;
-    margin: 0 auto;
-}
-
-ol,
-ul {
-    list-style-type: none;
-}
-a {
-    text-decoration: none;
-}
-
-
-// ------------------------------SKIP BUTTON
-.skipButton {
-    position: absolute;
-    left: -1000px;
-    top: 10px;
-    z-index: 999;
-    padding: 0 5px;
-    background: rgba(117, 116, 116, 0.7);
-    color: white;
-    border: double white 2px;
-}
-
-.skipButton:focus {
-    left: unset;
-    right: 10px;
 }
 
 // --------------------MAIN BUTTONS
@@ -77,10 +29,12 @@ a.button {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-weight: 900;
+    border: 1px solid transparent;
+    border-radius: 12px;
     background: $maingreen;
-    border: double transparent 3px;
-    border-radius: 5px;
-    box-shadow: 5px 5px rgba(128, 128, 128, 0.5);
+    box-shadow:  13px 13px 24px #69ac97, 
+            -13px -13px 24px #a4ffe2;
+    
     padding: 1% 4%;
     margin: 0 auto;
     transition: all 0.3s;
@@ -90,10 +44,11 @@ input[type=submit]:hover,
 input[type=submit]:focus,
 .button:hover,
 .button:focus {
-    color: white;
     background: #F8BCB3;
-    border: double white 3px;
-    box-shadow: 5px 5px rgba(207, 207, 207, 0.5);
+    border: solid white 1px;
+    border-radius: 12px;
+    box-shadow:  13px 13px 24px #c99288, 
+            -13px -13px 24px #ffdcdc;
 }
 
 
@@ -104,7 +59,8 @@ input[type=submit]:focus,
 .page {
     height: 100vh;
     padding: 30px 0;
-    border: 8px double #1e4e22;
+    background: #f0efef;
+    border: 4px double #4e504e;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -112,7 +68,6 @@ input[type=submit]:focus,
     align-items: center;
 }
 
-.top,
 .finalPage,
 .questionOne,
 .questionTwo,
@@ -126,28 +81,32 @@ input[type=submit]:focus,
     width: 100%;
     height: 100%;
     .options {
-        border: 4px double #F8BCB3;
+        // border: 4px double #F8BCB3;
         width: 60%;
         height: 60%;
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        border-radius: 30px;
+        background: linear-gradient(-45deg, rgba(73, 73, 73, 0.22), rgba(255, 255, 255, 0.733));
+        box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+        -8px -8px 12px 0 rgba(255, 255, 255, 0.541);
         label {
-            font-size: calc(1.5rem + 0.8vw);
-            padding: 10px 20px;
+            font-size: calc(1.3rem + 0.8vw);
+            padding: 10px 0;
             margin: 0 auto;
             width: 60%;
             border: 2px double transparent;
+            border-radius: 12px;
         }
         
         label:hover,
         label:focus,
         input:checked + label {
-            background: #f7c6c6;
-            color: white;
+            background: rgba(243, 189, 184, 0.5);
             border: 2px double #c5a2a2; 
-            font-style: italic;
-            font-weight: 300;
+            font-weight: 600;
         }
         input {
             opacity: 0;
@@ -223,9 +182,11 @@ h3 {
 h2::after,
 h3::after {
     @include afterUnderline(50%);
-    background-color: rgba(248, 188, 179,0.4);
+    background-color: rgba(250, 209, 202, 0.582);
     width: 90%;
     left: 5%;
+    box-shadow:  10px 10px 20px #ebc9c3, 
+            -10px -10px 20px #fce5e5;
 }
 
 .finalPage .orderButton {

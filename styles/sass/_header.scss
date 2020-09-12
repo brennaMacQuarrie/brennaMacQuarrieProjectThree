@@ -13,19 +13,75 @@ $height : 50%;
 }
 
 
-//TODO ---------- this isnt sitting how i want it to. why. 
+// -------------------------------------- STYLE STRIPPING
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 3px;
+    overflow-x: hidden;
+}
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.wrapper {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ol,
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+
+// ------------------------------SKIP BUTTON
+.skipButton {
+    position: absolute;
+    left: -1000px;
+    top: 10px;
+    z-index: 999;
+    padding: 0 5px;
+    background: rgba(117, 116, 116, 0.7);
+    color: white;
+    border: double white 2px;
+}
+
+.skipButton:focus {
+    left: unset;
+    right: 10px;
+}
+
 header {
     background-image: url("../assets/hogOnly.jpg");
     background-size: 900px;
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
-    border: 8px double #1e4e22;
+    border: 4px double #4e504e;
     border-radius: 5px;
 }
 
+//TODO ---------- this isnt sitting how i want it to. why. wrapper?!
 .top {
-    // margin-top: 30px;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px auto;
+        .logo {
+            width: 40%;
+            min-width: 200px;
+        }
+    }
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -40,18 +96,6 @@ header {
     }
 }
 
-
-//TODO why does this look like shit?
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px auto;
-    .logo {
-        width: 50%;
-        min-width: 200px;
-    }
-}
 
 h1 {
     font-size: calc(3.5rem + 2vw);
@@ -83,7 +127,6 @@ h1::after {
     position: relative;
 }
 .hamburg > div {
-    position: absolute;
     top: 45%;
     left: 25%;
     width: 50%;
@@ -91,6 +134,7 @@ h1::after {
     background: #a8daca;
     border-radius: 50px;
     transition: all 0.4s;
+    position: absolute;
 }
 div.one {
     top: 25%;

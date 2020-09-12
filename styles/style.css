@@ -236,13 +236,61 @@ html {
   overflow: hidden;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 3px;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.wrapper {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.skipButton {
+  position: absolute;
+  left: -1000px;
+  top: 10px;
+  z-index: 999;
+  padding: 0 5px;
+  background: rgba(117, 116, 116, 0.7);
+  color: white;
+  border: double white 2px;
+}
+
+.skipButton:focus {
+  left: unset;
+  right: 10px;
+}
+
 header {
   background-image: url("../assets/hogOnly.jpg");
   background-size: 900px;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
-  border: 8px double #1e4e22;
+  border: 4px double #4e504e;
   border-radius: 5px;
 }
 
@@ -262,6 +310,24 @@ header {
   height: 100%;
 }
 
+.top nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px auto;
+}
+
+.top nav .logo {
+  width: 40%;
+  min-width: 200px;
+}
+
 .top .mainPage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -277,24 +343,6 @@ header {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-}
-
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 10px auto;
-}
-
-nav .logo {
-  width: 50%;
-  min-width: 200px;
 }
 
 h1 {
@@ -335,7 +383,6 @@ h1::after {
 }
 
 .hamburg > div {
-  position: absolute;
   top: 45%;
   left: 25%;
   width: 50%;
@@ -344,6 +391,7 @@ h1::after {
   border-radius: 50px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  position: absolute;
 }
 
 div.one {
@@ -423,8 +471,8 @@ div.three {
   background-color: white;
 }
 
-@media (max-width: 650px) {
-  .options {
+@media (max-width: 500px) {
+  .page .addPoints .options {
     width: 80%;
   }
 }
@@ -447,54 +495,6 @@ div.three {
   }
 }
 
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1.6rem;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 3px;
-  overflow-x: hidden;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.wrapper {
-  width: 90%;
-  max-width: 1500px;
-  margin: 0 auto;
-}
-
-ol,
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-.skipButton {
-  position: absolute;
-  left: -1000px;
-  top: 10px;
-  z-index: 999;
-  padding: 0 5px;
-  background: rgba(117, 116, 116, 0.7);
-  color: white;
-  border: double white 2px;
-}
-
-.skipButton:focus {
-  left: unset;
-  right: 10px;
-}
-
 .buttonSteez {
   width: 100%;
   display: -webkit-box;
@@ -510,11 +510,11 @@ a.button {
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: 900;
-  background: #a8daca;
-  border: double transparent 3px;
-  border-radius: 5px;
-  -webkit-box-shadow: 5px 5px rgba(128, 128, 128, 0.5);
-          box-shadow: 5px 5px rgba(128, 128, 128, 0.5);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: #94ccba;
+  -webkit-box-shadow: 13px 13px 24px #69ac97,  -13px -13px 24px #a4ffe2;
+          box-shadow: 13px 13px 24px #69ac97,  -13px -13px 24px #a4ffe2;
   padding: 1% 4%;
   margin: 0 auto;
   -webkit-transition: all 0.3s;
@@ -525,18 +525,19 @@ input[type=submit]:hover,
 input[type=submit]:focus,
 .button:hover,
 .button:focus {
-  color: white;
   background: #F8BCB3;
-  border: double white 3px;
-  -webkit-box-shadow: 5px 5px rgba(207, 207, 207, 0.5);
-          box-shadow: 5px 5px rgba(207, 207, 207, 0.5);
+  border: solid white 1px;
+  border-radius: 12px;
+  -webkit-box-shadow: 13px 13px 24px #c99288,  -13px -13px 24px #ffdcdc;
+          box-shadow: 13px 13px 24px #c99288,  -13px -13px 24px #ffdcdc;
 }
 
 .resultPage,
 .page {
   height: 100vh;
   padding: 30px 0;
-  border: 8px double #1e4e22;
+  background: #f0efef;
+  border: 4px double #4e504e;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -553,7 +554,6 @@ input[type=submit]:focus,
           align-items: center;
 }
 
-.top,
 .finalPage,
 .questionOne,
 .questionTwo,
@@ -576,14 +576,12 @@ input[type=submit]:focus,
   height: 100%;
 }
 
-.top .options,
 .finalPage .options,
 .questionOne .options,
 .questionTwo .options,
 .questionThree .options,
 .questionFour .options,
 .questionFive .options {
-  border: 4px double #F8BCB3;
   width: 60%;
   height: 60%;
   display: -webkit-box;
@@ -596,25 +594,26 @@ input[type=submit]:focus,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-radius: 30px;
+  background: linear-gradient(-45deg, rgba(73, 73, 73, 0.22), rgba(255, 255, 255, 0.733));
+  -webkit-box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(255, 255, 255, 0.541);
+          box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(255, 255, 255, 0.541);
 }
 
-.top .options label,
 .finalPage .options label,
 .questionOne .options label,
 .questionTwo .options label,
 .questionThree .options label,
 .questionFour .options label,
 .questionFive .options label {
-  font-size: calc(1.5rem + 0.8vw);
-  padding: 10px 20px;
+  font-size: calc(1.3rem + 0.8vw);
+  padding: 10px 0;
   margin: 0 auto;
   width: 60%;
   border: 2px double transparent;
+  border-radius: 12px;
 }
 
-.top .options label:hover,
-.top .options label:focus,
-.top .options input:checked + label,
 .finalPage .options label:hover,
 .finalPage .options label:focus,
 .finalPage .options input:checked + label,
@@ -633,14 +632,11 @@ input[type=submit]:focus,
 .questionFive .options label:hover,
 .questionFive .options label:focus,
 .questionFive .options input:checked + label {
-  background: #f7c6c6;
-  color: white;
+  background: rgba(243, 189, 184, 0.5);
   border: 2px double #c5a2a2;
-  font-style: italic;
-  font-weight: 300;
+  font-weight: 600;
 }
 
-.top .options input,
 .finalPage .options input,
 .questionOne .options input,
 .questionTwo .options input,
@@ -714,7 +710,7 @@ h3 {
 
 h2 {
   font-size: calc(3rem + 2vw);
-  color: #a8daca;
+  color: #94ccba;
   font-style: italic;
   font-weight: 900;
   margin: 0 auto 40px;
@@ -737,9 +733,11 @@ h3::after {
   bottom: 0;
   z-index: -1;
   height: 50%;
-  background-color: rgba(248, 188, 179, 0.4);
+  background-color: rgba(250, 209, 202, 0.582);
   width: 90%;
   left: 5%;
+  -webkit-box-shadow: 10px 10px 20px #ebc9c3,  -10px -10px 20px #fce5e5;
+          box-shadow: 10px 10px 20px #ebc9c3,  -10px -10px 20px #fce5e5;
 }
 
 .finalPage .orderButton {
@@ -749,7 +747,7 @@ h3::after {
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: 900;
-  background: #a8daca;
+  background: #94ccba;
   border: double transparent 3px;
   border-radius: 5px;
   -webkit-box-shadow: 5px 5px rgba(128, 128, 128, 0.5);
