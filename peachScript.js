@@ -15,21 +15,29 @@ pricklyPeach.hamburger = function() {
     });
 }
 
+
 //function to send points into hogs obj
 pricklyPeach.hogPoints = function () {
     $(`.addPoints`).on(`submit`, function (e) {
         e.preventDefault();
-
+        
         let answer = $(this).find(`input:checked`).val();
-        pricklyPeach.hogs[answer] += 1
+        pricklyPeach.hogs[answer] += 1;
+        
         
         if (!answer) {
             swal({
                 title: "please pick an answer!",
                 button: "okie"
-            })
-            // $('.buttonSteez input').on('click', window.location='#resultPage'")
-        }
+            });
+        } 
+
+        // this is where i got stuck. I wanted to stop it from scrolling but I think I'd need to build a new function to get the buttons to scroll. I want to take some time this week to learn ho wto do this properly so i can try it next time.
+        // else {
+        //     pricklyPeach.scroll()
+        //     console.log(pricklyPeach.hogs);
+        // }
+            
     });
 }
 
@@ -45,7 +53,6 @@ pricklyPeach.displayHog = function() {
         for (let hog in pricklyPeach.hogs) {
             const score = pricklyPeach.hogs[hog];
             
-            // does this do what i want it to do? does it do anything???
             if (score == winningScore) {
                 chosenHog = hog;
             } else if (score > winningScore) {
