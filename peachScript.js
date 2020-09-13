@@ -15,17 +15,23 @@ pricklyPeach.hamburger = function() {
     });
 }
 
-//function to send points into object of hogs (come on. "object of hogs?!?" lollllll)
+//function to send points into hogs obj
 pricklyPeach.hogPoints = function () {
     $(`.addPoints`).on(`submit`, function (e) {
         e.preventDefault();
 
         let answer = $(this).find(`input:checked`).val();
         pricklyPeach.hogs[answer] += 1
-        console.log(pricklyPeach.hogs);
+        
+        if (!answer) {
+            swal({
+                title: "please pick an answer!",
+                button: "okie"
+            })
+            // $('.buttonSteez input').on('click', window.location='#resultPage'")
+        }
     });
 }
-
 
 //function to get & display user generated hog
 pricklyPeach.displayHog = function() {
@@ -47,14 +53,12 @@ pricklyPeach.displayHog = function() {
                 chosenHog = hog;   
             } 
         }
-        console.log(chosenHog);
         $(`.finalPage img[id=${chosenHog}]`).toggleClass(`showMe`);
 
         $(`.resultHog`).text(`${chosenHog}`);
 
     });
 }
-
 
 //function to reset the quiz 
 pricklyPeach.reset = function() {
@@ -82,7 +86,7 @@ pricklyPeach.init = function() {
 
 // DOCUMENT READY
 $(document).ready(function() {
-
+    
     pricklyPeach.init();
 
 });
