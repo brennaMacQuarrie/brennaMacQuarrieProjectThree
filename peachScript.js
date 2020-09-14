@@ -15,24 +15,6 @@ pricklyPeach.hamburger = function() {
     });
 }
 
-
-// pricklyPeach.scrollTo = function(id) {
-//     console.log("scroll");
-        //>>first check if it exists (do we need length here?)
-//     if ($(id).length) {
-            //>> then create a variable to hold which item is used to offset
-//         var getOffset = $(id).offset().top;
-            //>> this makes 50 px on top so it's not ugly af
-//         var targetDistance = 50;
-            //>> this is the scroll animation to make it smoov
-//         $('html,body').animate({
-//             scrollTop: getOffset - targetDistance
-            //>> how long it takes in ms i think
-//         }, 500);
-//     }
-// }
-
-
 //function to send points into hogs obj
 pricklyPeach.hogPoints = function () {
     $(`.addPoints`).on(`submit`, function (e) {
@@ -42,17 +24,18 @@ pricklyPeach.hogPoints = function () {
         pricklyPeach.hogs[answer] += 1;
         
 
-        // this is where i got stuck. I wanted to stop it from scrolling but I think I'd need to build a new function to get the buttons to scroll differently. I want to take some time this week to learn how to do this properly so i can try it next time.
-        
-        if (!answer) {
-            // wanted to change this attribute on only the current form, but i'd have to toggle it...
-            $(this[".buttonSteez input"]).attr("onclick", "");
-            // this throws an alert when the user hasn't picked an option, but it still scrolls to next page.
-            swal({
-                title: "please pick an answer!",
-                button: "okie"
-            });
-        } 
+        // this is where i got stuck. I wanted to stop it from scrolling but I think I'd need to build a new function to get the buttons to scroll differently. I want to take some time this week to learn how to do this properly so i can try it next time. I know I should have deleted it. but I wanted to show a piece of my effort. i deleted the like, nine different scroll functions I built.
+
+        // ($('type=radio') == ':checked')  ??
+        // if (!answer) {
+        //     // wanted to change this attribute on only the current form, but i'd have to toggle it...
+        //     $(this[".buttonSteez input"]).attr("onclick", "");
+        //     // this throws an alert when the user hasn't picked an option, but it still scrolls to next page.
+        //     swal({
+        //         title: "please pick an answer!",
+        //         button: "okie"
+        //     });
+        // } 
             
     });
 }
