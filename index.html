@@ -44,7 +44,7 @@
     <section class="page" id="questionOne">
         <h2>Pick a Color!</h2>
         <form action="" class=
-        "questionOne addPoints">
+        "questionOne addPoints" data-form="color" data-scrollto="#questionTwo">
             <div class="options">
                 <input aria-label="hidden" type="radio" name="color" id="peachCol" value="peach">
                 <label for="peachCol">Blush</label>
@@ -56,15 +56,14 @@
                 <label for="bunCol">Charcoal</label>
             </div>
             <div class="buttonSteez">
-                <input onclick="window.location='#questionTwo'" type="submit" value="Next">
-                <!-- onclick="scrollTo('#questionTwo')" -->
+                <input type="submit" value="Next">
             </div>
         </form>
     </section>
 
     <section class="page" id="questionTwo">
         <h2>Your Fave Food?</h2>
-        <form action="" class="questionTwo addPoints">
+        <form action="" class="questionTwo addPoints" data-form="food" data-scrollto="#questionThree">
             <div class="options">
                 <input aria-label="hidden" type="radio" name="food" id="parsFood" value="parsley">
                 <label for="parsFood">Nuts</label>
@@ -76,14 +75,15 @@
                 <label for="peachFood">Fruits</label>
             </div>
             <div class="buttonSteez">
-                <input onclick="window.location='#questionThree'"type="submit" value="Next">
+                <input type="submit" value="Next">
             </div>
         </form>
     </section>
 
     <section class="page" id="questionThree">
         <h2>Your Alter Ego?</h2>
-        <form action="" class="questionThree addPoints">
+        <form action="" class="questionThree addPoints" data-form="alterEgo" 
+            data-scrollto="#questionFour">
             <div class="options">
                 <input aria-label="hidden" type="radio" name="alterEgo" id="parsEgo" value="parsley">
                 <label for="parsEgo">Aladdin</label>
@@ -95,16 +95,18 @@
                 <label for="bunEgo">Batman</label>
             </div>
             <div class="buttonSteez">
-                <input onclick="window.location='#questionFour'" type="submit" value="Next">
+                <input type="submit" value="Next">
             </div>
         </form>
     </section>
 
     <section class="page" id="questionFour">
         <h2>Pick A Hat!</h2>
-        <form action="" class="questionFour addPoints">
+        <form action="" class="questionFour addPoints" data-form="hats" 
+            data-scrollto="#questionFive">
             <div class="options">
-                <input aria-label="hidden" type="radio" name="hats" id="parsHat" value="parsley">
+                <input aria-label="hidden" type="radio" name="hats" id="parsHat" value="parsley" data-form="hats" 
+            data-scrollto="#questionFive">
                 <label for="parsHat">Ball Cap</label>
     
                 <input aria-label="hidden" type="radio" name="hats" id="bunHat" value="bun">
@@ -114,14 +116,14 @@
                 <label for="peachHat">Ear Muffs</label>
             </div>
             <div class="buttonSteez">
-                <input onclick="window.location='#questionFive'" type="submit" value="Next">
+                <input type="submit" value="Next">
             </div>
         </form>
     </section>
 
     <section class="page" id="questionFive">
         <h2>Whatcha Wanna Do?</h2>
-        <form action="" class="questionFive addPoints" id="done">
+        <form action="" class="questionFive addPoints" id="done" data-form="activity" data-scrollto="#resultPage">
             <div class="options">
                 <input aria-label="hidden" type="radio" name="activity" id="bunDo" value="bun">
                 <label for="bunDo">Read</label>
@@ -133,7 +135,7 @@
                 <label for="peachDo">Snuggle</label>
             </div>
             <div class="buttonSteez">
-                <input onclick="window.location='#resultPage'" type="submit" value="See Ur Hog!">
+                <input type="submit" value="See Ur Hog!">
             </div>
         </form>
     </section>

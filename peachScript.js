@@ -20,22 +20,21 @@ pricklyPeach.hogPoints = function () {
     $(`.addPoints`).on(`submit`, function (e) {
         e.preventDefault();
         
+        let nextPage = $(this).data('scrollto');
+
         let answer = $(this).find(`input:checked`).val();
         pricklyPeach.hogs[answer] += 1;
         
-
-        // this is where i got stuck. I wanted to stop it from scrolling but I think I'd need to build a new function to get the buttons to scroll differently. I want to take some time this week to learn how to do this properly so i can try it next time. I know I should have deleted it. but I wanted to show a piece of my effort. i deleted the like, nine different scroll functions I built.
-
-        // ($('type=radio') == ':checked')  ??
-        // if (!answer) {
-        //     // wanted to change this attribute on only the current form, but i'd have to toggle it...
-        //     $(this[".buttonSteez input"]).attr("onclick", "");
-        //     // this throws an alert when the user hasn't picked an option, but it still scrolls to next page.
-        //     swal({
-        //         title: "please pick an answer!",
-        //         button: "okie"
-        //     });
-        // } 
+        if (answer === undefined) {
+            $(this[".buttonSteez input"]).attr("onclick", "");
+            // this throws an alert when the user hasn't picked an option, but it still scrolls to next page.
+            swal({
+                title: "please pick an answer!",
+                button: "okie"
+            });
+        } else {
+            window.location = nextPage;
+        }
             
     });
 }
