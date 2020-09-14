@@ -15,20 +15,22 @@ pricklyPeach.hamburger = function() {
     });
 }
 
-// function to scroll????
 
 // pricklyPeach.scrollTo = function(id) {
 //     console.log("scroll");
-
+        //>>first check if it exists (do we need length here?)
 //     if ($(id).length) {
+            //>> then create a variable to hold which item is used to offset
 //         var getOffset = $(id).offset().top;
+            //>> this makes 50 px on top so it's not ugly af
 //         var targetDistance = 50;
+            //>> this is the scroll animation to make it smoov
 //         $('html,body').animate({
 //             scrollTop: getOffset - targetDistance
+            //>> how long it takes in ms i think
 //         }, 500);
 //     }
 // }
-
 
 
 //function to send points into hogs obj
@@ -42,17 +44,15 @@ pricklyPeach.hogPoints = function () {
 
         // this is where i got stuck. I wanted to stop it from scrolling but I think I'd need to build a new function to get the buttons to scroll differently. I want to take some time this week to learn how to do this properly so i can try it next time.
         
-        // if (!answer) {
+        if (!answer) {
             // wanted to change this attribute on only the current form, but i'd have to toggle it...
-
+            $(this[".buttonSteez input"]).attr("onclick", "");
             // this throws an alert when the user hasn't picked an option, but it still scrolls to next page.
-        //     swal({
-        //         title: "please pick an answer!",
-        //         button: "okie"
-        //     });
-        // } else {
-            //pricklyPeach.scrollTo();
-        // }
+            swal({
+                title: "please pick an answer!",
+                button: "okie"
+            });
+        } 
             
     });
 }
@@ -63,10 +63,19 @@ pricklyPeach.displayHog = function() {
     $(`#done`).on(`submit`, function(e) {
         e.preventDefault();
 
-        const chosenHog = Object.keys(pricklyPeach.hogs).reduce((a, b) =>
-            pricklyPeach.hogs[a] > pricklyPeach.hogs[b] ? a : b
-        );
+        let winningScore = 0;
+        let chosenHog = "";
 
+        for (let hog in pricklyPeach.hogs) {
+            const score = pricklyPeach.hogs[hog];
+            
+            if (score == winningScore) {
+                chosenHog = hog;
+            } else if (score > winningScore) {
+                winningScore = score;
+                chosenHog = hog;   
+            } 
+        }
         $(`.finalPage img[id=${chosenHog}]`).toggleClass(`showMe`);
 
         $(`.resultHog`).text(`${chosenHog}`);
@@ -93,7 +102,6 @@ pricklyPeach.reset = function() {
 // BUILD INIT FUNC
 pricklyPeach.init = function() {
     pricklyPeach.hamburger();
-    // pricklyPeach.scrollTo();
     pricklyPeach.hogPoints();
     pricklyPeach.displayHog();
     pricklyPeach.reset();
