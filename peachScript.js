@@ -26,8 +26,6 @@ pricklyPeach.hogPoints = function () {
         pricklyPeach.hogs[answer] += 1;
         
         if (answer === undefined) {
-            $(this[".buttonSteez input"]).attr("onclick", "");
-            // this throws an alert when the user hasn't picked an option, but it still scrolls to next page.
             swal({
                 title: "please pick an answer!",
                 button: "okie"
