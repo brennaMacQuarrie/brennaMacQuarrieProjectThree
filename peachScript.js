@@ -15,7 +15,6 @@ pricklyPeach.hamburger = function() {
     });
 }
 
-
 //function to send points into hogs obj
 pricklyPeach.hogPoints = function () {
     $(`.addPoints`).on(`submit`, function (e) {
@@ -24,19 +23,18 @@ pricklyPeach.hogPoints = function () {
         let answer = $(this).find(`input:checked`).val();
         pricklyPeach.hogs[answer] += 1;
         
-        
-        if (!answer) {
-            swal({
-                title: "please pick an answer!",
-                button: "okie"
-            });
-        } 
 
         // this is where i got stuck. I wanted to stop it from scrolling but I think I'd need to build a new function to get the buttons to scroll. I want to take some time this week to learn ho wto do this properly so i can try it next time.
-        // else {
-        //     pricklyPeach.scroll()
-        //     console.log(pricklyPeach.hogs);
-        // }
+        
+        // if (!answer) {
+            // wanted to change this attribute on only the current form, but i'd have to toggle it...
+        //     $(this[".buttonSteez input"]).attr("onclick", "");
+            // this throws an alert when the user hasn't picked an option, but it still scrolls to next page.
+        //     swal({
+        //         title: "please pick an answer!",
+        //         button: "okie"
+        //     });
+        // } 
             
     });
 }
