@@ -79,7 +79,7 @@ pricklyPeach.reset = function() {
 }
 
 
-// BUILD INIT FUNC
+// INIT FUNC
 pricklyPeach.init = function() {
     pricklyPeach.hamburger();
     pricklyPeach.hogPoints();
