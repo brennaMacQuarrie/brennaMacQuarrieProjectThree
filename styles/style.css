@@ -245,6 +245,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 3px;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -408,7 +409,7 @@ div.three {
   text-align: right;
   position: absolute;
   top: 70px;
-  right: 50px;
+  right: 80px;
   padding: 0;
   height: auto;
   opacity: 0;
